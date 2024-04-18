@@ -1,9 +1,12 @@
 #![cfg_attr(not(feature = "std"), no_std)]
+#[cfg(feature = "serde")]
+use serde::{Deserialize, Serialize};
 
 include!(concat!(env!("OUT_DIR"), "/codegen.rs"));
 
 /// Keyboard layouts, used to convert between key-code types.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub enum Keyboard {
     #[default]
     US,
@@ -23,6 +26,7 @@ impl Keyboard {
 
 /// A single mapped keyboard key.
 #[derive(Debug, Clone, Copy)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub struct MappedKey<'a> {
     /// HID usage-id for keyboard key
     pub usage_id: u8,
