@@ -82,6 +82,29 @@ fn main() {
     }
     write!(&mut mappings_fs, "}}\n").unwrap();
 
+    // build static mappings for mapped keys
+    let mut builder = phf_codegen::Map::new();
+    for key in &key_codes {
+        builder.entry(
+            &key.usage_id,
+            &format!(
+                "MappedKey{{
+    usage_id: {},
+    dom_key: \"{}\",
+    prefix: \"{}\",
+}}",
+                key.usage_id, key.key_code, key.prefix,
+            ),
+        );
+    }
+    write!(&mut mappings_fs, "/// usage-id to mapped key info.\n").unwrap();
+    write!(
+        &mut mappings_fs,
+        "pub static MAPPED_KEYS: phf::Map<&'static str, MappedKey> = \n{};\n",
+        builder.build(),
+    )
+    .unwrap();
+
     // build static mappings for US layout
     let mut builder = phf_codegen::Map::new();
     for key_code in &keycodes_us {

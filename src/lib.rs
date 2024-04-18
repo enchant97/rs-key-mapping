@@ -19,3 +19,31 @@ impl Keyboard {
     }
 }
 
+/// A single mapped keyboard key.
+#[derive(Debug, Clone, Copy)]
+pub struct MappedKey<'a> {
+    /// HID usage-id for keyboard key
+    pub usage_id: u8,
+    /// The DOM key representation
+    pub dom_key: &'a str,
+    /// Machine friendly key name
+    pub prefix: &'a str,
+}
+
+#[cfg(test)]
+mod tests {
+    use crate::Keyboard;
+
+    #[test]
+    fn dom_key_to_hid() {
+        assert_eq!(0x04, *Keyboard::US.dom_key_to_usage_id("KeyA").unwrap());
+        assert_eq!(
+            0x31,
+            *Keyboard::US.dom_key_to_usage_id("Backslash").unwrap()
+        );
+        assert_eq!(
+            0x32,
+            *Keyboard::UK.dom_key_to_usage_id("Backslash").unwrap()
+        );
+    }
+}
