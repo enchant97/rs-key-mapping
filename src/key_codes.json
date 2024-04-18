@@ -1,0 +1,828 @@
+[
+  {
+    "usage_id": "0x04",
+    "key_code": "KeyA",
+    "lang_code": null,
+    "visual": "A",
+    "prefix": "A"
+  },
+  {
+    "usage_id": "0x05",
+    "key_code": "KeyB",
+    "lang_code": null,
+    "visual": "B",
+    "prefix": "B"
+  },
+  {
+    "usage_id": "0x06",
+    "key_code": "KeyC",
+    "lang_code": null,
+    "visual": "C",
+    "prefix": "C"
+  },
+  {
+    "usage_id": "0x07",
+    "key_code": "KeyD",
+    "lang_code": null,
+    "visual": "D",
+    "prefix": "D"
+  },
+  {
+    "usage_id": "0x08",
+    "key_code": "KeyE",
+    "lang_code": null,
+    "visual": "E",
+    "prefix": "E"
+  },
+  {
+    "usage_id": "0x09",
+    "key_code": "KeyF",
+    "lang_code": null,
+    "visual": "F",
+    "prefix": "F"
+  },
+  {
+    "usage_id": "0x0A",
+    "key_code": "KeyG",
+    "lang_code": null,
+    "visual": "G",
+    "prefix": "G"
+  },
+  {
+    "usage_id": "0x0B",
+    "key_code": "KeyH",
+    "lang_code": null,
+    "visual": "H",
+    "prefix": "H"
+  },
+  {
+    "usage_id": "0x0C",
+    "key_code": "KeyI",
+    "lang_code": null,
+    "visual": "I",
+    "prefix": "I"
+  },
+  {
+    "usage_id": "0x0D",
+    "key_code": "KeyJ",
+    "lang_code": null,
+    "visual": "J",
+    "prefix": "J"
+  },
+  {
+    "usage_id": "0x0E",
+    "key_code": "KeyK",
+    "lang_code": null,
+    "visual": "K",
+    "prefix": "K"
+  },
+  {
+    "usage_id": "0x0F",
+    "key_code": "KeyL",
+    "lang_code": null,
+    "visual": "L",
+    "prefix": "L"
+  },
+  {
+    "usage_id": "0x10",
+    "key_code": "KeyM",
+    "lang_code": null,
+    "visual": "M",
+    "prefix": "M"
+  },
+  {
+    "usage_id": "0x11",
+    "key_code": "KeyN",
+    "lang_code": null,
+    "visual": "N",
+    "prefix": "N"
+  },
+  {
+    "usage_id": "0x12",
+    "key_code": "KeyO",
+    "lang_code": null,
+    "visual": "O",
+    "prefix": "O"
+  },
+  {
+    "usage_id": "0x13",
+    "key_code": "KeyP",
+    "lang_code": null,
+    "visual": "P",
+    "prefix": "P"
+  },
+  {
+    "usage_id": "0x14",
+    "key_code": "KeyQ",
+    "lang_code": null,
+    "visual": "Q",
+    "prefix": "Q"
+  },
+  {
+    "usage_id": "0x15",
+    "key_code": "KeyR",
+    "lang_code": null,
+    "visual": "R",
+    "prefix": "R"
+  },
+  {
+    "usage_id": "0x16",
+    "key_code": "KeyS",
+    "lang_code": null,
+    "visual": "S",
+    "prefix": "S"
+  },
+  {
+    "usage_id": "0x17",
+    "key_code": "KeyT",
+    "lang_code": null,
+    "visual": "T",
+    "prefix": "T"
+  },
+  {
+    "usage_id": "0x18",
+    "key_code": "KeyU",
+    "lang_code": null,
+    "visual": "U",
+    "prefix": "U"
+  },
+  {
+    "usage_id": "0x19",
+    "key_code": "KeyV",
+    "lang_code": null,
+    "visual": "V",
+    "prefix": "V"
+  },
+  {
+    "usage_id": "0x1A",
+    "key_code": "KeyW",
+    "lang_code": null,
+    "visual": "W",
+    "prefix": "W"
+  },
+  {
+    "usage_id": "0x1B",
+    "key_code": "KeyX",
+    "lang_code": null,
+    "visual": "X",
+    "prefix": "X"
+  },
+  {
+    "usage_id": "0x1C",
+    "key_code": "KeyY",
+    "lang_code": null,
+    "visual": "Y",
+    "prefix": "Y"
+  },
+  {
+    "usage_id": "0x1D",
+    "key_code": "KeyZ",
+    "lang_code": null,
+    "visual": "Z",
+    "prefix": "Z"
+  },
+  {
+    "usage_id": "0x1E",
+    "key_code": "Digit1",
+    "lang_code": null,
+    "visual": "1",
+    "prefix": "ONE"
+  },
+  {
+    "usage_id": "0x1F",
+    "key_code": "Digit2",
+    "lang_code": null,
+    "visual": "2",
+    "prefix": "TWO"
+  },
+  {
+    "usage_id": "0x20",
+    "key_code": "Digit3",
+    "lang_code": null,
+    "visual": "3",
+    "prefix": "THREE"
+  },
+  {
+    "usage_id": "0x21",
+    "key_code": "Digit4",
+    "lang_code": null,
+    "visual": "4",
+    "prefix": "FOUR"
+  },
+  {
+    "usage_id": "0x22",
+    "key_code": "Digit5",
+    "lang_code": null,
+    "visual": "5",
+    "prefix": "FIVE"
+  },
+  {
+    "usage_id": "0x23",
+    "key_code": "Digit6",
+    "lang_code": null,
+    "visual": "6",
+    "prefix": "SIX"
+  },
+  {
+    "usage_id": "0x24",
+    "key_code": "Digit7",
+    "lang_code": null,
+    "visual": "7",
+    "prefix": "SEVEN"
+  },
+  {
+    "usage_id": "0x25",
+    "key_code": "Digit8",
+    "lang_code": null,
+    "visual": "8",
+    "prefix": "EIGHT"
+  },
+  {
+    "usage_id": "0x26",
+    "key_code": "Digit9",
+    "lang_code": null,
+    "visual": "9",
+    "prefix": "NINE"
+  },
+  {
+    "usage_id": "0x27",
+    "key_code": "Digit0",
+    "lang_code": null,
+    "visual": "0",
+    "prefix": "ZERO"
+  },
+  {
+    "usage_id": "0x28",
+    "key_code": "Enter",
+    "lang_code": null,
+    "visual": "ENTER",
+    "prefix": "ENTER"
+  },
+  {
+    "usage_id": "0x29",
+    "key_code": "Escape",
+    "lang_code": null,
+    "visual": "ESCAPE",
+    "prefix": "ESCAPE"
+  },
+  {
+    "usage_id": "0x2A",
+    "key_code": "Backspace",
+    "lang_code": null,
+    "visual": "DELETE",
+    "prefix": "BACKSPACE"
+  },
+  {
+    "usage_id": "0x2B",
+    "key_code": "Tab",
+    "lang_code": null,
+    "visual": "TAB",
+    "prefix": "TAB"
+  },
+  {
+    "usage_id": "0x2C",
+    "key_code": "Space",
+    "lang_code": null,
+    "visual": "SPACE",
+    "prefix": "SPACEBAR"
+  },
+  {
+    "usage_id": "0x2D",
+    "key_code": "Minus",
+    "lang_code": null,
+    "visual": "-",
+    "prefix": "MINUS"
+  },
+  {
+    "usage_id": "0x2E",
+    "key_code": "Equal",
+    "lang_code": null,
+    "visual": "=",
+    "prefix": "EQUALS"
+  },
+  {
+    "usage_id": "0x2F",
+    "key_code": "BracketLeft",
+    "lang_code": null,
+    "visual": "[",
+    "prefix": "LEFT_BRACKET"
+  },
+  {
+    "usage_id": "0x30",
+    "key_code": "BracketRight",
+    "lang_code": null,
+    "visual": "]",
+    "prefix": "RIGHT_BRACKET"
+  },
+  {
+    "usage_id": "0x31",
+    "key_code": "Backslash",
+    "lang_code": "US",
+    "visual": null,
+    "prefix": "BACKSLASH"
+  },
+  {
+    "usage_id": "0x32",
+    "key_code": "Backslash",
+    "lang_code": "UK",
+    "visual": "#~",
+    "prefix": "POUND"
+  },
+  {
+    "usage_id": "0x33",
+    "key_code": "Semicolon",
+    "lang_code": null,
+    "visual": ";",
+    "prefix": "SEMICOLON"
+  },
+  {
+    "usage_id": "0x34",
+    "key_code": "Quote",
+    "lang_code": null,
+    "visual": "'",
+    "prefix": "QUOTE"
+  },
+  {
+    "usage_id": "0x35",
+    "key_code": "Backquote",
+    "lang_code": null,
+    "visual": "`~",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x36",
+    "key_code": "Comma",
+    "lang_code": null,
+    "visual": ",",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x37",
+    "key_code": "Period",
+    "lang_code": null,
+    "visual": ".",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x38",
+    "key_code": "Slash",
+    "lang_code": null,
+    "visual": "/",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x39",
+    "key_code": "CapsLock",
+    "lang_code": null,
+    "visual": "CAPS LOCK",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x3A",
+    "key_code": "F1",
+    "lang_code": null,
+    "visual": "F1",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x3B",
+    "key_code": "F2",
+    "lang_code": null,
+    "visual": "F2",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x3C",
+    "key_code": "F3",
+    "lang_code": null,
+    "visual": "F3",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x3D",
+    "key_code": "F4",
+    "lang_code": null,
+    "visual": "F4",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x3E",
+    "key_code": "F5",
+    "lang_code": null,
+    "visual": "F5",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x3F",
+    "key_code": "F6",
+    "lang_code": null,
+    "visual": "F6",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x40",
+    "key_code": "F7",
+    "lang_code": null,
+    "visual": "F7",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x41",
+    "key_code": "F8",
+    "lang_code": null,
+    "visual": "F8",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x42",
+    "key_code": "F9",
+    "lang_code": null,
+    "visual": "F9",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x43",
+    "key_code": "F10",
+    "lang_code": null,
+    "visual": "F10",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x44",
+    "key_code": "F11",
+    "lang_code": null,
+    "visual": "F11",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x45",
+    "key_code": "F12",
+    "lang_code": null,
+    "visual": "F12",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x46",
+    "key_code": "PrintScreen",
+    "lang_code": null,
+    "visual": "PRINT SCREEN",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x47",
+    "key_code": "ScrollLock",
+    "lang_code": null,
+    "visual": "SCROLL LOCK",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x48",
+    "key_code": "Pause",
+    "lang_code": null,
+    "visual": "PAUSE BREAK",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x49",
+    "key_code": "Insert",
+    "lang_code": null,
+    "visual": "INSERT",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x4A",
+    "key_code": "Home",
+    "lang_code": null,
+    "visual": "HOME",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x4B",
+    "key_code": "PageUp",
+    "lang_code": null,
+    "visual": "PAGE UP",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x4C",
+    "key_code": "Delete",
+    "lang_code": null,
+    "visual": "DELETE",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x4D",
+    "key_code": "End",
+    "lang_code": null,
+    "visual": "END",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x4E",
+    "key_code": "PageDown",
+    "lang_code": null,
+    "visual": "PAGE DOWN",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x4F",
+    "key_code": "ArrowRight",
+    "lang_code": null,
+    "visual": "RIGHT ARROW",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x50",
+    "key_code": "ArrowLeft",
+    "lang_code": null,
+    "visual": "LEFT ARROW",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x51",
+    "key_code": "ArrowDown",
+    "lang_code": null,
+    "visual": "DOWN ARROW",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x52",
+    "key_code": "ArrowUp",
+    "lang_code": null,
+    "visual": "UP ARROW",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x53",
+    "key_code": "NumLock",
+    "lang_code": null,
+    "visual": "NUM LOCK",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x54",
+    "key_code": "NumpadDivide",
+    "lang_code": null,
+    "visual": "KEYPAD /",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x55",
+    "key_code": "NumpadMultiply",
+    "lang_code": null,
+    "visual": "KEYPAD *",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x56",
+    "key_code": "NumpadSubtract",
+    "lang_code": null,
+    "visual": "KEYPAD -",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x57",
+    "key_code": "NumpadAdd",
+    "lang_code": null,
+    "visual": "KEYPAD +",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x58",
+    "key_code": "NumpadEnter",
+    "lang_code": null,
+    "visual": "KEYPAD ENTER",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x59",
+    "key_code": "Numpad1",
+    "lang_code": null,
+    "visual": "KEYPAD 1",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x5A",
+    "key_code": "Numpad2",
+    "lang_code": null,
+    "visual": "KEYPAD 2",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x5B",
+    "key_code": "Numpad3",
+    "lang_code": null,
+    "visual": "KEYPAD 3",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x5C",
+    "key_code": "Numpad4",
+    "lang_code": null,
+    "visual": "KEYPAD 4",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x5D",
+    "key_code": "Numpad5",
+    "lang_code": null,
+    "visual": "KEYPAD 5",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x5E",
+    "key_code": "Numpad6",
+    "lang_code": null,
+    "visual": "KEYPAD 6",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x5F",
+    "key_code": "Numpad7",
+    "lang_code": null,
+    "visual": "KEYPAD 7",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x60",
+    "key_code": "Numpad8",
+    "lang_code": null,
+    "visual": "KEYPAD 8",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x61",
+    "key_code": "Numpad9",
+    "lang_code": null,
+    "visual": "KEYPAD 9",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x62",
+    "key_code": "Numpad0",
+    "lang_code": null,
+    "visual": "KEYPAD 0",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x63",
+    "key_code": "NumpadDecimal",
+    "lang_code": null,
+    "visual": "KEYPAD .",
+    "prefix": null
+  },
+  {
+    "usage_id": "0x64",
+    "key_code": "IntlBackslash",
+    "lang_code": null,
+    "visual": null,
+    "prefix": "KEYPAD_BACKSLASH"
+  },
+  {
+    "usage_id": "0x67",
+    "key_code": "NumpadEqual",
+    "lang_code": null,
+    "visual": "KEYPAD =",
+    "prefix": "KEYPAD_EQUALS"
+  },
+  {
+    "usage_id": "0x68",
+    "key_code": "F13",
+    "lang_code": null,
+    "visual": "F13",
+    "prefix": "F13"
+  },
+  {
+    "usage_id": "0x69",
+    "key_code": "F14",
+    "lang_code": null,
+    "visual": "F14",
+    "prefix": "F14"
+  },
+  {
+    "usage_id": "0x6A",
+    "key_code": "F15",
+    "lang_code": null,
+    "visual": "F15",
+    "prefix": "F15"
+  },
+  {
+    "usage_id": "0x6B",
+    "key_code": "F16",
+    "lang_code": null,
+    "visual": "F16",
+    "prefix": "F16"
+  },
+  {
+    "usage_id": "0x6C",
+    "key_code": "F17",
+    "lang_code": null,
+    "visual": "F17",
+    "prefix": "F17"
+  },
+  {
+    "usage_id": "0x6D",
+    "key_code": "F18",
+    "lang_code": null,
+    "visual": "F18",
+    "prefix": "F18"
+  },
+  {
+    "usage_id": "0x6E",
+    "key_code": "F19",
+    "lang_code": null,
+    "visual": "F19",
+    "prefix": "F19"
+  },
+  {
+    "usage_id": "0x6F",
+    "key_code": "F20",
+    "lang_code": null,
+    "visual": "F20",
+    "prefix": "F20"
+  },
+  {
+    "usage_id": "0x70",
+    "key_code": "F21",
+    "lang_code": null,
+    "visual": "F21",
+    "prefix": "F21"
+  },
+  {
+    "usage_id": "0x71",
+    "key_code": "F22",
+    "lang_code": null,
+    "visual": "F22",
+    "prefix": "F22"
+  },
+  {
+    "usage_id": "0x72",
+    "key_code": "F23",
+    "lang_code": null,
+    "visual": "F23",
+    "prefix": "F23"
+  },
+  {
+    "usage_id": "0x73",
+    "key_code": "F24",
+    "lang_code": null,
+    "visual": "F24",
+    "prefix": "F24"
+  },
+  {
+    "usage_id": "0xE0",
+    "key_code": "ControlLeft",
+    "lang_code": null,
+    "visual": "LEFT CONTROL",
+    "prefix": "LEFT_CONTROL"
+  },
+  {
+    "usage_id": "0xE1",
+    "key_code": "LeftShift",
+    "lang_code": null,
+    "visual": "LEFT SHIFT",
+    "prefix": "LEFT_SHIFT"
+  },
+  {
+    "usage_id": "0xE2",
+    "key_code": "AltLeft",
+    "lang_code": null,
+    "visual": "LEFT ALT",
+    "prefix": "LEFT_ALT"
+  },
+  {
+    "usage_id": "0xE3",
+    "key_code": "MetaLeft",
+    "lang_code": null,
+    "visual": "LEFT META",
+    "prefix": "LEFT_META"
+  },
+  {
+    "usage_id": "0xE4",
+    "key_code": "ControlRight",
+    "lang_code": null,
+    "visual": "RIGHT CONTROL",
+    "prefix": "RIGHT_CONTROL"
+  },
+  {
+    "usage_id": "0xE5",
+    "key_code": "ShiftRight",
+    "lang_code": null,
+    "visual": "RIGHT SHIFT",
+    "prefix": "RIGHT_SHIFT"
+  },
+  {
+    "usage_id": "0xE6",
+    "key_code": "AltRight",
+    "lang_code": null,
+    "visual": "RIGHT ALT",
+    "prefix": "RIGHT_ALT"
+  },
+  {
+    "usage_id": "0xE7",
+    "key_code": "MetaRight",
+    "lang_code": null,
+    "visual": "RIGHT META",
+    "prefix": "RIGHT_META"
+  }
+]
