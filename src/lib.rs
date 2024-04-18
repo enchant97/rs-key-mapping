@@ -1,3 +1,13 @@
+//! key-mapping library allows for keyboard key code conversion between systems such as the DOM and
+//! HID usage-ids. With Rust `[no_std]` support.
+//!
+//! # Features
+//!
+//! Extra functionality is behind optional features to optimize compile time and binary size.
+//!
+//! - **`std`** *(enabled by default)* - Add support for Rust's libstd types.
+//! - **`serde`** Add support for `serde` de/serializing library..
+#![forbid(unsafe_code)]
 #![cfg_attr(not(feature = "std"), no_std)]
 #[cfg(feature = "serde")]
 use serde::{Deserialize, Serialize};
