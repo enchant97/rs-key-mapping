@@ -1,3 +1,5 @@
+#![cfg_attr(not(feature = "std"), no_std)]
+
 include!(concat!(env!("OUT_DIR"), "/codegen.rs"));
 
 /// Keyboard layouts, used to convert between key-code types.
