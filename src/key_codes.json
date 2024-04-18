@@ -347,329 +347,329 @@
     "key_code": "Backquote",
     "lang_code": null,
     "visual": "`~",
-    "prefix": null
+    "prefix": "BACK_QUOTE"
   },
   {
     "usage_id": "0x36",
     "key_code": "Comma",
     "lang_code": null,
     "visual": ",",
-    "prefix": null
+    "prefix": "COMMA"
   },
   {
     "usage_id": "0x37",
     "key_code": "Period",
     "lang_code": null,
     "visual": ".",
-    "prefix": null
+    "prefix": "PERIOD"
   },
   {
     "usage_id": "0x38",
     "key_code": "Slash",
     "lang_code": null,
     "visual": "/",
-    "prefix": null
+    "prefix": "FORWARD_SLASH"
   },
   {
     "usage_id": "0x39",
     "key_code": "CapsLock",
     "lang_code": null,
     "visual": "CAPS LOCK",
-    "prefix": null
+    "prefix": "CAPS_LOCK"
   },
   {
     "usage_id": "0x3A",
     "key_code": "F1",
     "lang_code": null,
     "visual": "F1",
-    "prefix": null
+    "prefix": "F1"
   },
   {
     "usage_id": "0x3B",
     "key_code": "F2",
     "lang_code": null,
     "visual": "F2",
-    "prefix": null
+    "prefix": "F2"
   },
   {
     "usage_id": "0x3C",
     "key_code": "F3",
     "lang_code": null,
     "visual": "F3",
-    "prefix": null
+    "prefix": "F3"
   },
   {
     "usage_id": "0x3D",
     "key_code": "F4",
     "lang_code": null,
     "visual": "F4",
-    "prefix": null
+    "prefix": "F4"
   },
   {
     "usage_id": "0x3E",
     "key_code": "F5",
     "lang_code": null,
     "visual": "F5",
-    "prefix": null
+    "prefix": "F5"
   },
   {
     "usage_id": "0x3F",
     "key_code": "F6",
     "lang_code": null,
     "visual": "F6",
-    "prefix": null
+    "prefix": "F6"
   },
   {
     "usage_id": "0x40",
     "key_code": "F7",
     "lang_code": null,
     "visual": "F7",
-    "prefix": null
+    "prefix": "F7"
   },
   {
     "usage_id": "0x41",
     "key_code": "F8",
     "lang_code": null,
     "visual": "F8",
-    "prefix": null
+    "prefix": "F8"
   },
   {
     "usage_id": "0x42",
     "key_code": "F9",
     "lang_code": null,
     "visual": "F9",
-    "prefix": null
+    "prefix": "F9"
   },
   {
     "usage_id": "0x43",
     "key_code": "F10",
     "lang_code": null,
     "visual": "F10",
-    "prefix": null
+    "prefix": "F10"
   },
   {
     "usage_id": "0x44",
     "key_code": "F11",
     "lang_code": null,
     "visual": "F11",
-    "prefix": null
+    "prefix": "F11"
   },
   {
     "usage_id": "0x45",
     "key_code": "F12",
     "lang_code": null,
     "visual": "F12",
-    "prefix": null
+    "prefix": "F12"
   },
   {
     "usage_id": "0x46",
     "key_code": "PrintScreen",
     "lang_code": null,
     "visual": "PRINT SCREEN",
-    "prefix": null
+    "prefix": "PRINT_SCREEN"
   },
   {
     "usage_id": "0x47",
     "key_code": "ScrollLock",
     "lang_code": null,
     "visual": "SCROLL LOCK",
-    "prefix": null
+    "prefix": "SCROLL_LOCK"
   },
   {
     "usage_id": "0x48",
     "key_code": "Pause",
     "lang_code": null,
     "visual": "PAUSE BREAK",
-    "prefix": null
+    "prefix": "PAUSE_BREAK"
   },
   {
     "usage_id": "0x49",
     "key_code": "Insert",
     "lang_code": null,
     "visual": "INSERT",
-    "prefix": null
+    "prefix": "INSERT"
   },
   {
     "usage_id": "0x4A",
     "key_code": "Home",
     "lang_code": null,
     "visual": "HOME",
-    "prefix": null
+    "prefix": "HOME"
   },
   {
     "usage_id": "0x4B",
     "key_code": "PageUp",
     "lang_code": null,
     "visual": "PAGE UP",
-    "prefix": null
+    "prefix": "PAGE_UP"
   },
   {
     "usage_id": "0x4C",
     "key_code": "Delete",
     "lang_code": null,
     "visual": "DELETE",
-    "prefix": null
+    "prefix": "DELETE"
   },
   {
     "usage_id": "0x4D",
     "key_code": "End",
     "lang_code": null,
     "visual": "END",
-    "prefix": null
+    "prefix": "END"
   },
   {
     "usage_id": "0x4E",
     "key_code": "PageDown",
     "lang_code": null,
     "visual": "PAGE DOWN",
-    "prefix": null
+    "prefix": "PAGE_DOWN"
   },
   {
     "usage_id": "0x4F",
     "key_code": "ArrowRight",
     "lang_code": null,
     "visual": "RIGHT ARROW",
-    "prefix": null
+    "prefix": "RIGHT_ARROW"
   },
   {
     "usage_id": "0x50",
     "key_code": "ArrowLeft",
     "lang_code": null,
     "visual": "LEFT ARROW",
-    "prefix": null
+    "prefix": "LEFT_ARROW"
   },
   {
     "usage_id": "0x51",
     "key_code": "ArrowDown",
     "lang_code": null,
     "visual": "DOWN ARROW",
-    "prefix": null
+    "prefix": "DOWN_ARROW"
   },
   {
     "usage_id": "0x52",
     "key_code": "ArrowUp",
     "lang_code": null,
     "visual": "UP ARROW",
-    "prefix": null
+    "prefix": "UP_ARROW"
   },
   {
     "usage_id": "0x53",
     "key_code": "NumLock",
     "lang_code": null,
     "visual": "NUM LOCK",
-    "prefix": null
+    "prefix": "NUM_LOCK"
   },
   {
     "usage_id": "0x54",
     "key_code": "NumpadDivide",
     "lang_code": null,
     "visual": "KEYPAD /",
-    "prefix": null
+    "prefix": "KEYPAD_DIVIDE"
   },
   {
     "usage_id": "0x55",
     "key_code": "NumpadMultiply",
     "lang_code": null,
     "visual": "KEYPAD *",
-    "prefix": null
+    "prefix": "KEYPAD_MULTIPLY"
   },
   {
     "usage_id": "0x56",
     "key_code": "NumpadSubtract",
     "lang_code": null,
     "visual": "KEYPAD -",
-    "prefix": null
+    "prefix": "KEYPAD_SUBTRACT"
   },
   {
     "usage_id": "0x57",
     "key_code": "NumpadAdd",
     "lang_code": null,
     "visual": "KEYPAD +",
-    "prefix": null
+    "prefix": "KEYPAD_ADD"
   },
   {
     "usage_id": "0x58",
     "key_code": "NumpadEnter",
     "lang_code": null,
     "visual": "KEYPAD ENTER",
-    "prefix": null
+    "prefix": "KEYPAD_ENTER"
   },
   {
     "usage_id": "0x59",
     "key_code": "Numpad1",
     "lang_code": null,
     "visual": "KEYPAD 1",
-    "prefix": null
+    "prefix": "KEYPAD_ONE"
   },
   {
     "usage_id": "0x5A",
     "key_code": "Numpad2",
     "lang_code": null,
     "visual": "KEYPAD 2",
-    "prefix": null
+    "prefix": "KEYPAD_TWO"
   },
   {
     "usage_id": "0x5B",
     "key_code": "Numpad3",
     "lang_code": null,
     "visual": "KEYPAD 3",
-    "prefix": null
+    "prefix": "KEYPAD_THREE"
   },
   {
     "usage_id": "0x5C",
     "key_code": "Numpad4",
     "lang_code": null,
     "visual": "KEYPAD 4",
-    "prefix": null
+    "prefix": "KEYPAD_FOUR"
   },
   {
     "usage_id": "0x5D",
     "key_code": "Numpad5",
     "lang_code": null,
     "visual": "KEYPAD 5",
-    "prefix": null
+    "prefix": "KEYPAD_FIVE"
   },
   {
     "usage_id": "0x5E",
     "key_code": "Numpad6",
     "lang_code": null,
     "visual": "KEYPAD 6",
-    "prefix": null
+    "prefix": "KEYPAD_SIX"
   },
   {
     "usage_id": "0x5F",
     "key_code": "Numpad7",
     "lang_code": null,
     "visual": "KEYPAD 7",
-    "prefix": null
+    "prefix": "KEYPAD_SEVEN"
   },
   {
     "usage_id": "0x60",
     "key_code": "Numpad8",
     "lang_code": null,
     "visual": "KEYPAD 8",
-    "prefix": null
+    "prefix": "KEYPAD_EIGHT"
   },
   {
     "usage_id": "0x61",
     "key_code": "Numpad9",
     "lang_code": null,
     "visual": "KEYPAD 9",
-    "prefix": null
+    "prefix": "KEYPAD_NINE"
   },
   {
     "usage_id": "0x62",
     "key_code": "Numpad0",
     "lang_code": null,
     "visual": "KEYPAD 0",
-    "prefix": null
+    "prefix": "KEYPAD_ZERO"
   },
   {
     "usage_id": "0x63",
     "key_code": "NumpadDecimal",
     "lang_code": null,
     "visual": "KEYPAD .",
-    "prefix": null
+    "prefix": "KEYPAD_DECIMAL"
   },
   {
     "usage_id": "0x64",
