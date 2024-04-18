@@ -11,10 +11,11 @@ pub enum Keyboard {
 impl Keyboard {
     /// Convert key-code into a hid usage id, using the given keyboard layout.
     /// Uses a performant O(1) operation.
-    pub fn key_code_to_usage_id(&self, key_code: &str) -> Option<&u8> {
+    pub fn dom_key_to_usage_id(&self, key_code: &str) -> Option<&u8> {
         match self {
-            Self::US => KEY_CODES_US.get(key_code),
-            Self::UK => KEY_CODES_UK.get(key_code),
+            Self::US => DOM_KEYS_US.get(key_code),
+            Self::UK => DOM_KEYS_UK.get(key_code),
         }
     }
 }
+

@@ -89,12 +89,12 @@ fn main() {
     }
     write!(
         &mut mappings_fs,
-        "/// KeyCode to usage-id map for the US layout.\n"
+        "/// DOM key to usage-id map for the US layout.\n"
     )
     .unwrap();
     write!(
         &mut mappings_fs,
-        "pub static KEY_CODES_US: phf::Map<&'static str, u8> = \n{};\n",
+        "pub static DOM_KEYS_US: phf::Map<&'static str, u8> = \n{};\n",
         builder.build(),
     )
     .unwrap();
@@ -106,12 +106,12 @@ fn main() {
     }
     write!(
         &mut mappings_fs,
-        "/// KeyCode to usage-id map for the UK layout.\n"
+        "/// DOM key to usage-id map for the UK layout.\n"
     )
     .unwrap();
     write!(
         &mut mappings_fs,
-        "pub static KEY_CODES_UK: phf::Map<&'static str, u8> = \n{};\n",
+        "pub static DOM_KEYS_UK: phf::Map<&'static str, u8> = \n{};\n",
         builder.build(),
     )
     .unwrap();
