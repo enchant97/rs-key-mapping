@@ -2,7 +2,7 @@
 name = "key-mapping"
 version = "0.1.0"
 edition = "2021"
-rust-version = "1.77"
+rust-version = "1.77.0"
 license = "MIT OR Apache-2.0"
 description = "Library allowing for keyboard key code conversion between systems such as the DOM and HID usage-ids"
 readme = "README.md"

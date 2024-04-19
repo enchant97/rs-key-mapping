@@ -1,3 +1,4 @@
+#![doc(html_playground_url = "https://play.rust-lang.org/")]
 //! key-mapping library allows for keyboard key code conversion between systems such as the DOM and
 //! HID usage-ids. With Rust `[no_std]` support.
 //!
@@ -6,7 +7,26 @@
 //! Extra functionality is behind optional features to optimize compile time and binary size.
 //!
 //! - **`std`** *(enabled by default)* - Add support for Rust's libstd types.
-//! - **`serde`** Add support for `serde` de/serializing library..
+//! - **`serde`** Add support for `serde` de/serializing library.
+//!
+//! # Example Usage
+//!
+//! ```toml
+//! [dependencies]
+//! key-mapping = "0.1"
+//! ```
+//!
+//! ```rust,editable
+//! use key_mapping::Keyboard;
+//!
+//! fn main() {
+//!     let dom_code = "KeyA";
+//!     let usage_id = Keyboard::US.dom_key_to_usage_id(dom_code).unwrap();
+//!
+//!     assert_eq!(0x04, *usage_id);
+//! }
+//! ```
+
 #![forbid(unsafe_code)]
 #![cfg_attr(not(feature = "std"), no_std)]
 #[cfg(feature = "serde")]
@@ -18,8 +38,10 @@ include!(concat!(env!("OUT_DIR"), "/codegen.rs"));
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub enum Keyboard {
+    /// US keyboard layout *(default)*
     #[default]
     US,
+    /// UK keyboard layout
     UK,
 }
 
