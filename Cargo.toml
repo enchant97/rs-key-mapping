@@ -2,6 +2,14 @@
 name = "key-mapping"
 version = "0.1.0"
 edition = "2021"
+rust-version = "1.77"
+license = "MIT OR Apache-2.0"
+description = "Library allowing for keyboard key code conversion between systems such as the DOM and HID usage-ids"
+readme = "README.md"
+homepage = "https://github.com/enchant97/rs-key-mapping"
+repository = "https://github.com/enchant97/rs-key-mapping"
+keywords = [ "keyboard", "layouts", "hid", "mappings" ]
+categories = [ "no-std", "no-std::no-alloc", "encoding" ]
 
 [dependencies]
 phf = { version = "0.11", default-features = false }
