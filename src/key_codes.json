@@ -1,5 +1,12 @@
 [
   {
+    "usage_id": "0x00",
+    "key_code": "Reserved",
+    "lang_code": null,
+    "visual": "None",
+    "prefix": "None"
+  },
+  {
     "usage_id": "0x04",
     "key_code": "KeyA",
     "lang_code": null,

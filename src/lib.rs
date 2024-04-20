@@ -8,6 +8,7 @@
 //!
 //! - **`std`** *(enabled by default)* - Add support for Rust's libstd types.
 //! - **`serde`** Add support for `serde` de/serializing library.
+//! - **`usbd-hid`** Add support for converting between the usbd-hid library KeyboardReport.
 //!
 //! # Example Usage
 //!
@@ -33,6 +34,11 @@
 use serde::{Deserialize, Serialize};
 
 include!(concat!(env!("OUT_DIR"), "/codegen.rs"));
+
+pub const MODIFIER_CODE_CTRL: u8 = 1;
+pub const MODIFIER_CODE_SHIFT: u8 = 2;
+pub const MODIFIER_CODE_ALT: u8 = 4;
+pub const MODIFIER_CODE_META: u8 = 8;
 
 /// Keyboard layouts, used to convert between key-code types.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
@@ -66,6 +72,78 @@ pub struct MappedKey<'a> {
     pub dom_key: &'a str,
     /// Machine friendly key name
     pub prefix: &'a str,
+}
+
+/// A keyboard action, could be used for making key press/release events,
+/// Defaults to no keys or modifiers.
+#[derive(Debug, Clone, Copy)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+pub struct KeyboardAction {
+    /// Keys included in action, represented as usage-ids
+    pub keys: [Keys; 6],
+    /// Whether ALT is held
+    pub alt: bool,
+    /// Whether CTRL is held
+    pub ctrl: bool,
+    /// Whether SHIFT is held
+    pub shift: bool,
+    /// Whether META is held
+    pub meta: bool,
+}
+
+impl Default for KeyboardAction {
+    fn default() -> Self {
+        Self {
+            keys: [
+                Keys::None,
+                Keys::None,
+                Keys::None,
+                Keys::None,
+                Keys::None,
+                Keys::None,
+            ],
+            alt: Default::default(),
+            ctrl: Default::default(),
+            shift: Default::default(),
+            meta: Default::default(),
+        }
+    }
+}
+
+#[cfg(feature = "usbd-hid")]
+impl From<KeyboardAction> for usbd_hid::descriptor::KeyboardReport {
+    fn from(value: KeyboardAction) -> Self {
+        let mut keycodes = [0; 6];
+        for (i, v) in value.keys.into_iter().map(|v| v as u8).enumerate() {
+            keycodes[i] = v;
+        }
+        Self {
+            modifier: value.get_modifer_code(),
+            reserved: 0,
+            leds: 0,
+            keycodes,
+        }
+    }
+}
+
+impl KeyboardAction {
+    /// Get the modifiers as their code representation
+    pub fn get_modifer_code(&self) -> u8 {
+        let mut result = 0;
+        if self.ctrl {
+            result |= MODIFIER_CODE_CTRL;
+        }
+        if self.shift {
+            result |= MODIFIER_CODE_SHIFT;
+        }
+        if self.alt {
+            result |= MODIFIER_CODE_ALT;
+        }
+        if self.meta {
+            result |= MODIFIER_CODE_META;
+        }
+        result
+    }
 }
 
 #[cfg(test)]

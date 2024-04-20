@@ -1,6 +1,6 @@
 [package]
 name = "key-mapping"
-version = "0.1.0"
+version = "0.2.0"
 edition = "2021"
 rust-version = "1.77.0"
 license = "MIT OR Apache-2.0"
@@ -14,6 +14,7 @@ categories = [ "no-std", "no-std::no-alloc", "encoding" ]
 [dependencies]
 phf = { version = "0.11", default-features = false }
 serde = { version = "1.0", default-features = false, features = [ "derive" ], optional = true }
+usbd-hid = { version = "0.7", optional = true }
 
 [features]
 default = [ "std" ]
