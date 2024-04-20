@@ -67,7 +67,8 @@ fn main() {
     write!(&mut mappings_fs, "#[repr(u8)]\n").unwrap();
     write!(
         &mut mappings_fs,
-        "#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]\n"
+        "#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+#[cfg_attr(feature = \"serde\", derive(Serialize, Deserialize))]\n"
     )
     .unwrap();
     write!(&mut mappings_fs, "pub enum Keys {{\n").unwrap();
