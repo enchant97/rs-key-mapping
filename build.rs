@@ -86,8 +86,9 @@ fn main() {
     // build static mappings for mapped keys
     let mut builder = phf_codegen::Map::new();
     for key in &key_codes {
+        let usage_id = hex::decode(key.usage_id.strip_prefix("0x").unwrap()).unwrap()[0];
         builder.entry(
-            &key.usage_id,
+            usage_id,
             &format!(
                 "MappedKey{{
     usage_id: {},
@@ -101,7 +102,7 @@ fn main() {
     write!(&mut mappings_fs, "/// usage-id to mapped key info.\n").unwrap();
     write!(
         &mut mappings_fs,
-        "pub static MAPPED_KEYS: phf::Map<&'static str, MappedKey> = \n{};\n",
+        "pub static MAPPED_KEYS: phf::Map<u8, MappedKey> = \n{};\n",
         builder.build(),
     )
     .unwrap();

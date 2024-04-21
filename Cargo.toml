@@ -1,6 +1,6 @@
 [package]
 name = "key-mapping"
-version = "0.2.1"
+version = "0.2.2"
 edition = "2021"
 rust-version = "1.77.0"
 license = "MIT OR Apache-2.0"
@@ -24,3 +24,4 @@ std = []
 serde = { version = "1.0", features = [ "derive" ] }
 serde_json = "1.0"
 phf_codegen = "0.11"
+hex = "0.4.3"

@@ -14,7 +14,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! key-mapping = "0.1"
+//! key-mapping = "0.2"
 //! ```
 //!
 //! ```rust,editable
@@ -63,7 +63,7 @@ impl Keyboard {
 }
 
 /// A single mapped keyboard key.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub struct MappedKey<'a> {
     /// HID usage-id for keyboard key
@@ -148,7 +148,7 @@ impl KeyboardAction {
 
 #[cfg(test)]
 mod tests {
-    use crate::Keyboard;
+    use crate::{Keyboard, MappedKey, MAPPED_KEYS};
 
     #[test]
     fn dom_key_to_hid() {
@@ -160,6 +160,18 @@ mod tests {
         assert_eq!(
             0x32,
             *Keyboard::UK.dom_key_to_usage_id("Backslash").unwrap()
+        );
+    }
+
+    #[test]
+    fn usage_id_to_mapping() {
+        assert_eq!(
+            MAPPED_KEYS.get(&0x04),
+            Some(&MappedKey {
+                usage_id: 0x04,
+                dom_key: "KeyA",
+                prefix: "A",
+            })
         );
     }
 }
