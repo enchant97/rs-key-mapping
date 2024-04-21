@@ -14,7 +14,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! key-mapping = "0.2"
+//! key-mapping = "0.3"
 //! ```
 //!
 //! ```rust,editable
@@ -76,7 +76,7 @@ pub struct MappedKey<'a> {
 
 /// A keyboard action, could be used for making key press/release events,
 /// Defaults to no keys or modifiers.
-#[derive(Debug, Clone, Copy)]
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
 pub struct KeyboardAction {
     /// Keys included in action, represented as usage-ids
@@ -148,7 +148,7 @@ impl KeyboardAction {
 
 #[cfg(test)]
 mod tests {
-    use crate::{Keyboard, MappedKey, MAPPED_KEYS};
+    use crate::{Keyboard, Keys, MappedKey, MAPPED_KEYS};
 
     #[test]
     fn dom_key_to_hid() {
@@ -161,6 +161,12 @@ mod tests {
             0x32,
             *Keyboard::UK.dom_key_to_usage_id("Backslash").unwrap()
         );
+    }
+
+    #[test]
+    fn u8_key_to_key() {
+        assert_eq!(Keys::try_from(0x04), Ok(Keys::A));
+        assert_eq!(Keys::try_from(0xff), Err(()));
     }
 
     #[test]

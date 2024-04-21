@@ -58,7 +58,6 @@ fn main() {
     let mut mappings_fs = BufWriter::new(fs::File::create(mappings_path).unwrap());
 
     // build usage-id enum
-
     write!(
         &mut mappings_fs,
         "/// Keyboard keys as enum values, with usage-id representation.\n"
@@ -67,7 +66,7 @@ fn main() {
     write!(&mut mappings_fs, "#[repr(u8)]\n").unwrap();
     write!(
         &mut mappings_fs,
-        "#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord)]
+        "#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[cfg_attr(feature = \"serde\", derive(Serialize, Deserialize))]\n"
     )
     .unwrap();
@@ -82,6 +81,30 @@ fn main() {
         .unwrap();
     }
     write!(&mut mappings_fs, "}}\n").unwrap();
+
+    // build usage-id to Keys TryFrom
+    write!(
+        &mut mappings_fs,
+        "impl TryFrom<u8> for Keys {{
+    type Error = ();
+    fn try_from(value: u8) -> Result<Self, Self::Error> {{
+        match value {{\n"
+    )
+    .unwrap();
+    for key in &key_codes {
+        write!(
+            &mut mappings_fs,
+            "x if x == Self::{0} as u8 => Ok(Self::{0}),\n",
+            key.prefix_as_pascal()
+        )
+        .unwrap();
+    }
+    write!(
+        &mut mappings_fs,
+        "_ => Err(()),
+}}}}}}",
+    )
+    .unwrap();
 
     // build static mappings for mapped keys
     let mut builder = phf_codegen::Map::new();
