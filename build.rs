@@ -11,7 +11,7 @@ struct KeyCode {
     pub usage_id: String,
     pub key_code: String,
     pub lang_code: Option<String>,
-    //pub visual: String,
+    pub visual: String,
     pub prefix: String,
 }
 
@@ -117,8 +117,9 @@ fn main() {
     usage_id: {},
     dom_key: \"{}\",
     prefix: \"{}\",
+    visual: r#\"{}\"#,
 }}",
-                key.usage_id, key.key_code, key.prefix,
+                key.usage_id, key.key_code, key.prefix, key.visual,
             ),
         );
     }

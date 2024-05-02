@@ -262,35 +262,35 @@
     "usage_id": "0x28",
     "key_code": "Enter",
     "lang_code": null,
-    "visual": "ENTER",
+    "visual": "↵",
     "prefix": "ENTER"
   },
   {
     "usage_id": "0x29",
     "key_code": "Escape",
     "lang_code": null,
-    "visual": "ESCAPE",
+    "visual": "Esc",
     "prefix": "ESCAPE"
   },
   {
     "usage_id": "0x2A",
     "key_code": "Backspace",
     "lang_code": null,
-    "visual": "DELETE",
+    "visual": "←",
     "prefix": "BACKSPACE"
   },
   {
     "usage_id": "0x2B",
     "key_code": "Tab",
     "lang_code": null,
-    "visual": "TAB",
+    "visual": "↹",
     "prefix": "TAB"
   },
   {
     "usage_id": "0x2C",
     "key_code": "Space",
     "lang_code": null,
-    "visual": "SPACE",
+    "visual": "␣",
     "prefix": "SPACEBAR"
   },
   {
@@ -325,14 +325,14 @@
     "usage_id": "0x31",
     "key_code": "Backslash",
     "lang_code": "US",
-    "visual": null,
+    "visual": "\\",
     "prefix": "BACKSLASH"
   },
   {
     "usage_id": "0x32",
     "key_code": "Backslash",
     "lang_code": "UK",
-    "visual": "#~",
+    "visual": "#",
     "prefix": "POUND"
   },
   {
@@ -353,7 +353,7 @@
     "usage_id": "0x35",
     "key_code": "Backquote",
     "lang_code": null,
-    "visual": "`~",
+    "visual": "`",
     "prefix": "BACK_QUOTE"
   },
   {
@@ -381,7 +381,7 @@
     "usage_id": "0x39",
     "key_code": "CapsLock",
     "lang_code": null,
-    "visual": "CAPS LOCK",
+    "visual": "⇪",
     "prefix": "CAPS_LOCK"
   },
   {
@@ -472,224 +472,224 @@
     "usage_id": "0x46",
     "key_code": "PrintScreen",
     "lang_code": null,
-    "visual": "PRINT SCREEN",
+    "visual": "Prt Scr",
     "prefix": "PRINT_SCREEN"
   },
   {
     "usage_id": "0x47",
     "key_code": "ScrollLock",
     "lang_code": null,
-    "visual": "SCROLL LOCK",
+    "visual": "⤓",
     "prefix": "SCROLL_LOCK"
   },
   {
     "usage_id": "0x48",
     "key_code": "Pause",
     "lang_code": null,
-    "visual": "PAUSE BREAK",
+    "visual": "Pause",
     "prefix": "PAUSE_BREAK"
   },
   {
     "usage_id": "0x49",
     "key_code": "Insert",
     "lang_code": null,
-    "visual": "INSERT",
+    "visual": "Ins",
     "prefix": "INSERT"
   },
   {
     "usage_id": "0x4A",
     "key_code": "Home",
     "lang_code": null,
-    "visual": "HOME",
+    "visual": "Home",
     "prefix": "HOME"
   },
   {
     "usage_id": "0x4B",
     "key_code": "PageUp",
     "lang_code": null,
-    "visual": "PAGE UP",
+    "visual": "PageUp",
     "prefix": "PAGE_UP"
   },
   {
     "usage_id": "0x4C",
     "key_code": "Delete",
     "lang_code": null,
-    "visual": "DELETE",
+    "visual": "Del",
     "prefix": "DELETE"
   },
   {
     "usage_id": "0x4D",
     "key_code": "End",
     "lang_code": null,
-    "visual": "END",
+    "visual": "End",
     "prefix": "END"
   },
   {
     "usage_id": "0x4E",
     "key_code": "PageDown",
     "lang_code": null,
-    "visual": "PAGE DOWN",
+    "visual": "PageDn",
     "prefix": "PAGE_DOWN"
   },
   {
     "usage_id": "0x4F",
     "key_code": "ArrowRight",
     "lang_code": null,
-    "visual": "RIGHT ARROW",
+    "visual": "→",
     "prefix": "RIGHT_ARROW"
   },
   {
     "usage_id": "0x50",
     "key_code": "ArrowLeft",
     "lang_code": null,
-    "visual": "LEFT ARROW",
+    "visual": "←",
     "prefix": "LEFT_ARROW"
   },
   {
     "usage_id": "0x51",
     "key_code": "ArrowDown",
     "lang_code": null,
-    "visual": "DOWN ARROW",
+    "visual": "↓",
     "prefix": "DOWN_ARROW"
   },
   {
     "usage_id": "0x52",
     "key_code": "ArrowUp",
     "lang_code": null,
-    "visual": "UP ARROW",
+    "visual": "↑",
     "prefix": "UP_ARROW"
   },
   {
     "usage_id": "0x53",
     "key_code": "NumLock",
     "lang_code": null,
-    "visual": "NUM LOCK",
+    "visual": "NumLock",
     "prefix": "NUM_LOCK"
   },
   {
     "usage_id": "0x54",
     "key_code": "NumpadDivide",
     "lang_code": null,
-    "visual": "KEYPAD /",
+    "visual": "/",
     "prefix": "KEYPAD_DIVIDE"
   },
   {
     "usage_id": "0x55",
     "key_code": "NumpadMultiply",
     "lang_code": null,
-    "visual": "KEYPAD *",
+    "visual": "*",
     "prefix": "KEYPAD_MULTIPLY"
   },
   {
     "usage_id": "0x56",
     "key_code": "NumpadSubtract",
     "lang_code": null,
-    "visual": "KEYPAD -",
+    "visual": "-",
     "prefix": "KEYPAD_SUBTRACT"
   },
   {
     "usage_id": "0x57",
     "key_code": "NumpadAdd",
     "lang_code": null,
-    "visual": "KEYPAD +",
+    "visual": "+",
     "prefix": "KEYPAD_ADD"
   },
   {
     "usage_id": "0x58",
     "key_code": "NumpadEnter",
     "lang_code": null,
-    "visual": "KEYPAD ENTER",
+    "visual": "↵",
     "prefix": "KEYPAD_ENTER"
   },
   {
     "usage_id": "0x59",
     "key_code": "Numpad1",
     "lang_code": null,
-    "visual": "KEYPAD 1",
+    "visual": "1",
     "prefix": "KEYPAD_ONE"
   },
   {
     "usage_id": "0x5A",
     "key_code": "Numpad2",
     "lang_code": null,
-    "visual": "KEYPAD 2",
+    "visual": "2",
     "prefix": "KEYPAD_TWO"
   },
   {
     "usage_id": "0x5B",
     "key_code": "Numpad3",
     "lang_code": null,
-    "visual": "KEYPAD 3",
+    "visual": "3",
     "prefix": "KEYPAD_THREE"
   },
   {
     "usage_id": "0x5C",
     "key_code": "Numpad4",
     "lang_code": null,
-    "visual": "KEYPAD 4",
+    "visual": "4",
     "prefix": "KEYPAD_FOUR"
   },
   {
     "usage_id": "0x5D",
     "key_code": "Numpad5",
     "lang_code": null,
-    "visual": "KEYPAD 5",
+    "visual": "5",
     "prefix": "KEYPAD_FIVE"
   },
   {
     "usage_id": "0x5E",
     "key_code": "Numpad6",
     "lang_code": null,
-    "visual": "KEYPAD 6",
+    "visual": "6",
     "prefix": "KEYPAD_SIX"
   },
   {
     "usage_id": "0x5F",
     "key_code": "Numpad7",
     "lang_code": null,
-    "visual": "KEYPAD 7",
+    "visual": "7",
     "prefix": "KEYPAD_SEVEN"
   },
   {
     "usage_id": "0x60",
     "key_code": "Numpad8",
     "lang_code": null,
-    "visual": "KEYPAD 8",
+    "visual": "8",
     "prefix": "KEYPAD_EIGHT"
   },
   {
     "usage_id": "0x61",
     "key_code": "Numpad9",
     "lang_code": null,
-    "visual": "KEYPAD 9",
+    "visual": "9",
     "prefix": "KEYPAD_NINE"
   },
   {
     "usage_id": "0x62",
     "key_code": "Numpad0",
     "lang_code": null,
-    "visual": "KEYPAD 0",
+    "visual": "0",
     "prefix": "KEYPAD_ZERO"
   },
   {
     "usage_id": "0x63",
     "key_code": "NumpadDecimal",
     "lang_code": null,
-    "visual": "KEYPAD .",
+    "visual": ".",
     "prefix": "KEYPAD_DECIMAL"
   },
   {
     "usage_id": "0x64",
     "key_code": "IntlBackslash",
     "lang_code": null,
-    "visual": null,
+    "visual": "`",
     "prefix": "IntlBackslash"
   },
   {
     "usage_id": "0x67",
     "key_code": "NumpadEqual",
     "lang_code": null,
-    "visual": "KEYPAD =",
+    "visual": "=",
     "prefix": "KEYPAD_EQUALS"
   },
   {
@@ -780,56 +780,56 @@
     "usage_id": "0xE0",
     "key_code": "ControlLeft",
     "lang_code": null,
-    "visual": "LEFT CONTROL",
+    "visual": "Ctrl",
     "prefix": "LEFT_CONTROL"
   },
   {
     "usage_id": "0xE1",
     "key_code": "ShiftLeft",
     "lang_code": null,
-    "visual": "LEFT SHIFT",
+    "visual": "Shift",
     "prefix": "LEFT_SHIFT"
   },
   {
     "usage_id": "0xE2",
     "key_code": "AltLeft",
     "lang_code": null,
-    "visual": "LEFT ALT",
+    "visual": "Alt",
     "prefix": "LEFT_ALT"
   },
   {
     "usage_id": "0xE3",
     "key_code": "MetaLeft",
     "lang_code": null,
-    "visual": "LEFT META",
+    "visual": "Meta",
     "prefix": "LEFT_META"
   },
   {
     "usage_id": "0xE4",
     "key_code": "ControlRight",
     "lang_code": null,
-    "visual": "RIGHT CONTROL",
+    "visual": "Ctrl",
     "prefix": "RIGHT_CONTROL"
   },
   {
     "usage_id": "0xE5",
     "key_code": "ShiftRight",
     "lang_code": null,
-    "visual": "RIGHT SHIFT",
+    "visual": "Shift",
     "prefix": "RIGHT_SHIFT"
   },
   {
     "usage_id": "0xE6",
     "key_code": "AltRight",
     "lang_code": null,
-    "visual": "RIGHT ALT",
+    "visual": "Alt",
     "prefix": "RIGHT_ALT"
   },
   {
     "usage_id": "0xE7",
     "key_code": "MetaRight",
     "lang_code": null,
-    "visual": "RIGHT META",
+    "visual": "Meta",
     "prefix": "RIGHT_META"
   }
 ]

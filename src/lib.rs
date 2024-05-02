@@ -72,6 +72,8 @@ pub struct MappedKey<'a> {
     pub dom_key: &'a str,
     /// Machine friendly key name
     pub prefix: &'a str,
+    /// Human friendly key name
+    pub visual: &'a str,
 }
 
 /// A keyboard action, could be used for making key press/release events,
@@ -177,6 +179,7 @@ mod tests {
                 usage_id: 0x04,
                 dom_key: "KeyA",
                 prefix: "A",
+                visual: "A",
             })
         );
     }
