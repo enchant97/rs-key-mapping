@@ -1,2 +1,6 @@
+[Tt]humbs.db
+*.DS_Store
+~$*
+
 /target
 /Cargo.lock

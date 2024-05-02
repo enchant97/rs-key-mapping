@@ -683,7 +683,7 @@
     "key_code": "IntlBackslash",
     "lang_code": null,
     "visual": null,
-    "prefix": "KEYPAD_BACKSLASH"
+    "prefix": "IntlBackslash"
   },
   {
     "usage_id": "0x67",
@@ -785,7 +785,7 @@
   },
   {
     "usage_id": "0xE1",
-    "key_code": "LeftShift",
+    "key_code": "ShiftLeft",
     "lang_code": null,
     "visual": "LEFT SHIFT",
     "prefix": "LEFT_SHIFT"
