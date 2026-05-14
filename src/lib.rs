@@ -77,11 +77,11 @@ pub struct MappedKey<'a> {
     pub visual: &'a str,
 }
 
-/// A keyboard action, could be used for making key press/release events,
+/// A keyboard report, could be used for making key press/release events,
 /// Defaults to no keys or modifiers.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-pub struct KeyboardAction<const N: usize = 6> {
+pub struct KeyboardReport<const N: usize = 6> {
     /// Keys included in action, represented as usage-ids
     #[cfg_attr(feature = "serde", serde(with = "serde_arrays"))]
     pub keys: [Keys; N],
@@ -95,7 +95,7 @@ pub struct KeyboardAction<const N: usize = 6> {
     pub meta: bool,
 }
 
-impl Default for KeyboardAction {
+impl Default for KeyboardReport {
     fn default() -> Self {
         Self {
             keys: [
@@ -115,8 +115,8 @@ impl Default for KeyboardAction {
 }
 
 #[cfg(feature = "usbd-hid")]
-impl From<KeyboardAction> for usbd_hid::descriptor::KeyboardReport {
-    fn from(value: KeyboardAction) -> Self {
+impl From<KeyboardReport> for usbd_hid::descriptor::KeyboardReport {
+    fn from(value: KeyboardReport) -> Self {
         let mut keycodes = [0; 6];
         for (i, v) in value.keys.into_iter().map(|v| v as u8).enumerate() {
             keycodes[i] = v;
@@ -131,8 +131,8 @@ impl From<KeyboardAction> for usbd_hid::descriptor::KeyboardReport {
 }
 
 #[cfg(feature = "embassy-usb-host")]
-impl From<KeyboardAction> for embassy_usb_host::class::hid::KeyboardReport {
-    fn from(value: KeyboardAction) -> Self {
+impl From<KeyboardReport> for embassy_usb_host::class::hid::KeyboardReport {
+    fn from(value: KeyboardReport) -> Self {
         let mut keycodes = [0; 6];
         for (i, v) in value.keys.into_iter().map(|v| v as u8).enumerate() {
             keycodes[i] = v;
@@ -144,7 +144,7 @@ impl From<KeyboardAction> for embassy_usb_host::class::hid::KeyboardReport {
     }
 }
 
-impl KeyboardAction {
+impl KeyboardReport {
     /// Get the modifiers as their code representation
     pub fn get_modifer_code(&self) -> u8 {
         let mut result = 0;
