@@ -9,7 +9,7 @@ jobs:
   publish-to-cratesio:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Setup rust
         run: rustup toolchain install stable --profile default
       - name: "Rust Caching"
