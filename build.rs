@@ -13,6 +13,7 @@ struct KeyCode {
     pub lang_code: Option<String>,
     pub visual: String,
     pub prefix: String,
+    pub key_type: String,
 }
 
 impl KeyCode {
@@ -118,8 +119,9 @@ fn main() {
     dom_key: \"{}\",
     prefix: \"{}\",
     visual: r#\"{}\"#,
+    key_type: MappedKeyType::{},
 }}",
-                key.usage_id, key.key_code, key.prefix, key.visual,
+                key.usage_id, key.key_code, key.prefix, key.visual, key.key_type,
             ),
         );
     }

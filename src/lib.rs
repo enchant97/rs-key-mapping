@@ -63,6 +63,22 @@ impl Keyboard {
     }
 }
 
+/// Keyboard key type.
+#[derive(Debug, Clone, Copy, PartialEq, Eq)]
+#[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+pub enum MappedKeyType {
+    Special,
+    Modifier,
+    Printable,
+    Whitespace,
+    Navigation,
+    Editing,
+    Ui,
+    Device,
+    Function,
+    Numeric,
+}
+
 /// A single mapped keyboard key.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
@@ -75,6 +91,8 @@ pub struct MappedKey<'a> {
     pub prefix: &'a str,
     /// Human friendly key name
     pub visual: &'a str,
+    /// The type of key
+    pub key_type: MappedKeyType,
 }
 
 /// A keyboard report, could be used for making key press/release events,
@@ -166,7 +184,7 @@ impl KeyboardReport {
 
 #[cfg(test)]
 mod tests {
-    use crate::{Keyboard, Keys, MappedKey, MAPPED_KEYS};
+    use crate::{Keyboard, Keys, MAPPED_KEYS, MappedKey, MappedKeyType};
 
     #[test]
     fn dom_key_to_hid() {
@@ -196,6 +214,7 @@ mod tests {
                 dom_key: "KeyA",
                 prefix: "A",
                 visual: "A",
+                key_type: MappedKeyType::Printable,
             })
         );
     }
