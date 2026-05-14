@@ -9,6 +9,7 @@
 //! - **`std`** *(enabled by default)* - Add support for Rust's libstd types.
 //! - **`serde`** Add support for `serde` de/serializing library.
 //! - **`usbd-hid`** Add support for converting between the usbd-hid library KeyboardReport.
+//! - **`embassy-usb-host`** Add support for converting between the embassy-usb-host library KeyboardReport.
 //!
 //! # Example Usage
 //!
@@ -124,6 +125,20 @@ impl From<KeyboardAction> for usbd_hid::descriptor::KeyboardReport {
             modifier: value.get_modifer_code(),
             reserved: 0,
             leds: 0,
+            keycodes,
+        }
+    }
+}
+
+#[cfg(feature = "embassy-usb-host")]
+impl From<KeyboardAction> for embassy_usb_host::class::hid::KeyboardReport {
+    fn from(value: KeyboardAction) -> Self {
+        let mut keycodes = [0; 6];
+        for (i, v) in value.keys.into_iter().map(|v| v as u8).enumerate() {
+            keycodes[i] = v;
+        }
+        Self {
+            modifiers: value.get_modifer_code(),
             keycodes,
         }
     }

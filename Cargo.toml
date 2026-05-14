@@ -16,6 +16,7 @@ phf = { version = "0.11", default-features = false }
 serde = { version = "1.0", default-features = false, features = [ "derive" ], optional = true }
 serde_arrays = { version = "0.2", optional = true }
 usbd-hid = { version = "0.8", optional = true }
+embassy-usb-host = { version = "0.1", optional = true }
 
 [features]
 default = [ "std" ]
