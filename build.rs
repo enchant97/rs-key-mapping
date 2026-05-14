@@ -58,29 +58,29 @@ fn main() {
     let mut mappings_fs = BufWriter::new(fs::File::create(mappings_path).unwrap());
 
     // build usage-id enum
-    write!(
+    writeln!(
         &mut mappings_fs,
-        "/// Keyboard keys as enum values, with usage-id representation.\n"
+        "/// Keyboard keys as enum values, with usage-id representation."
     )
     .unwrap();
-    write!(&mut mappings_fs, "#[repr(u8)]\n").unwrap();
+    writeln!(&mut mappings_fs, "#[repr(u8)]").unwrap();
     write!(
         &mut mappings_fs,
         "#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 #[cfg_attr(feature = \"serde\", derive(Serialize, Deserialize))]\n"
     )
     .unwrap();
-    write!(&mut mappings_fs, "pub enum Keys {{\n").unwrap();
+    writeln!(&mut mappings_fs, "pub enum Keys {{").unwrap();
     for key_code in &key_codes {
-        write!(
+        writeln!(
             &mut mappings_fs,
-            "    {} = {},\n",
+            "    {} = {},",
             key_code.prefix_as_pascal(),
             key_code.usage_id
         )
         .unwrap();
     }
-    write!(&mut mappings_fs, "}}\n").unwrap();
+    writeln!(&mut mappings_fs, "}}").unwrap();
 
     // build usage-id to Keys TryFrom
     write!(
@@ -92,9 +92,9 @@ fn main() {
     )
     .unwrap();
     for key in &key_codes {
-        write!(
+        writeln!(
             &mut mappings_fs,
-            "x if x == Self::{0} as u8 => Ok(Self::{0}),\n",
+            "x if x == Self::{0} as u8 => Ok(Self::{0}),",
             key.prefix_as_pascal()
         )
         .unwrap();
@@ -123,7 +123,7 @@ fn main() {
             ),
         );
     }
-    write!(&mut mappings_fs, "/// usage-id to mapped key info.\n").unwrap();
+    writeln!(&mut mappings_fs, "/// usage-id to mapped key info.").unwrap();
     write!(
         &mut mappings_fs,
         "pub static MAPPED_KEYS: phf::Map<u8, MappedKey> = \n{};\n",
@@ -136,9 +136,9 @@ fn main() {
     for key_code in &keycodes_us {
         builder.entry(&key_code.key_code, &key_code.usage_id);
     }
-    write!(
+    writeln!(
         &mut mappings_fs,
-        "/// DOM key to usage-id map for the US layout.\n"
+        "/// DOM key to usage-id map for the US layout."
     )
     .unwrap();
     write!(
@@ -153,9 +153,9 @@ fn main() {
     for key_code in &keycodes_uk {
         builder.entry(&key_code.key_code, &key_code.usage_id);
     }
-    write!(
+    writeln!(
         &mut mappings_fs,
-        "/// DOM key to usage-id map for the UK layout.\n"
+        "/// DOM key to usage-id map for the UK layout."
     )
     .unwrap();
     write!(
