@@ -112,7 +112,7 @@ fn main() {
         let usage_id = hex::decode(key.usage_id.strip_prefix("0x").unwrap()).unwrap()[0];
         builder.entry(
             usage_id,
-            &format!(
+            format!(
                 "MappedKey{{
     usage_id: {},
     dom_key: \"{}\",
