@@ -14,11 +14,13 @@ categories = [ "no-std", "no-std::no-alloc", "encoding" ]
 [dependencies]
 phf = { version = "0.11", default-features = false }
 serde = { version = "1.0", default-features = false, features = [ "derive" ], optional = true }
+serde_arrays = { version = "0.2", optional = true }
 usbd-hid = { version = "0.8", optional = true }
 
 [features]
 default = [ "std" ]
 std = []
+serde = ["dep:serde", "dep:serde_arrays"]
 
 [build-dependencies]
 serde = { version = "1.0", features = [ "derive" ] }

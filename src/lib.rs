@@ -80,9 +80,10 @@ pub struct MappedKey<'a> {
 /// Defaults to no keys or modifiers.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
-pub struct KeyboardAction {
+pub struct KeyboardAction<const N: usize = 6> {
     /// Keys included in action, represented as usage-ids
-    pub keys: [Keys; 6],
+    #[cfg_attr(feature = "serde", serde(with = "serde_arrays"))]
+    pub keys: [Keys; N],
     /// Whether ALT is held
     pub alt: bool,
     /// Whether CTRL is held
