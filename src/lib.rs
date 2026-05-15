@@ -148,6 +148,23 @@ impl From<KeyboardReport> for usbd_hid::descriptor::KeyboardReport {
     }
 }
 
+#[cfg(feature = "usbd-hid")]
+impl From<usbd_hid::descriptor::KeyboardReport> for KeyboardReport {
+    fn from(value: usbd_hid::descriptor::KeyboardReport) -> Self {
+        let mut keys = [Keys::None; 6];
+        for (i, v) in value.keycodes.into_iter().enumerate() {
+            keys[i] = v.try_into().unwrap_or(Keys::None);
+        }
+        Self {
+            keys,
+            alt: value.modifier & MODIFIER_CODE_ALT != 0,
+            ctrl: value.modifier & MODIFIER_CODE_CTRL != 0,
+            shift: value.modifier & MODIFIER_CODE_SHIFT != 0,
+            meta: value.modifier & MODIFIER_CODE_META != 0,
+        }
+    }
+}
+
 #[cfg(feature = "embassy-usb-host")]
 impl From<KeyboardReport> for embassy_usb_host::class::hid::KeyboardReport {
     fn from(value: KeyboardReport) -> Self {
@@ -158,6 +175,23 @@ impl From<KeyboardReport> for embassy_usb_host::class::hid::KeyboardReport {
         Self {
             modifiers: value.get_modifer_code(),
             keycodes,
+        }
+    }
+}
+
+#[cfg(feature = "embassy-usb-host")]
+impl From<embassy_usb_host::class::hid::KeyboardReport> for KeyboardReport {
+    fn from(value: embassy_usb_host::class::hid::KeyboardReport) -> Self {
+        let mut keys = [Keys::None; 6];
+        for (i, v) in value.keycodes.into_iter().enumerate() {
+            keys[i] = v.try_into().unwrap_or(Keys::None);
+        }
+        Self {
+            keys,
+            alt: value.alt(),
+            ctrl: value.ctrl(),
+            shift: value.shift(),
+            meta: value.gui(),
         }
     }
 }
