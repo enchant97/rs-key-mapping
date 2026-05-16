@@ -65,10 +65,11 @@ fn main() {
     )
     .unwrap();
     writeln!(&mut mappings_fs, "#[repr(u8)]").unwrap();
-    write!(
+    writeln!(
         &mut mappings_fs,
         "#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
-#[cfg_attr(feature = \"serde\", derive(Serialize, Deserialize))]\n"
+#[cfg_attr(feature = \"serde\", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = \"defmt\", derive(defmt::Format))]"
     )
     .unwrap();
     writeln!(&mut mappings_fs, "pub enum Keys {{").unwrap();

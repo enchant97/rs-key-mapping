@@ -1,4 +1,8 @@
 # Change Log
+
+## 0.7.1
+- add missing defmt support for `Keys`
+
 ## 0.7.0
 - add KeyStatusUpdate conversion from embassy-usb-host
 - add defmt support
