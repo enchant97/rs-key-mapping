@@ -201,6 +201,42 @@ impl From<embassy_usb_host::class::hid::KeyboardReport> for KeyboardReport {
     }
 }
 
+#[cfg(feature = "embassy-usb-host")]
+impl From<KeyboardReport> for embassy_usb_host::class::kbd::KeyStatusUpdate {
+    fn from(value: KeyboardReport) -> Self {
+        let mut keycodes = [None; 6];
+        for (i, v) in value.keys.into_iter().map(|v| v as u8).enumerate() {
+            keycodes[i] = core::num::NonZeroU8::new(v);
+        }
+        Self {
+            modifiers: value.get_modifer_code(),
+            reserved: 0,
+            keypress: keycodes,
+        }
+    }
+}
+
+#[cfg(feature = "embassy-usb-host")]
+impl From<embassy_usb_host::class::kbd::KeyStatusUpdate> for KeyboardReport {
+    fn from(value: embassy_usb_host::class::kbd::KeyStatusUpdate) -> Self {
+        let mut keys = [Keys::None; 6];
+        for (i, v) in value.keypress.into_iter().enumerate() {
+            keys[i] = v
+                .map(|v| v.get())
+                .unwrap_or(0)
+                .try_into()
+                .unwrap_or(Keys::None);
+        }
+        Self {
+            keys,
+            alt: value.modifiers & MODIFIER_CODE_ALT != 0,
+            ctrl: value.modifiers & MODIFIER_CODE_CTRL != 0,
+            shift: value.modifiers & MODIFIER_CODE_SHIFT != 0,
+            meta: value.modifiers & MODIFIER_CODE_META != 0,
+        }
+    }
+}
+
 impl KeyboardReport {
     /// Get the modifiers as their code representation
     pub fn get_modifer_code(&self) -> u8 {
