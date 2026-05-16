@@ -1,4 +1,8 @@
 # Change Log
+## 0.7.0
+- add KeyStatusUpdate conversion from embassy-usb-host
+- add defmt support
+
 ## 0.6.0
 - Ability to convert from other KeyboardReports
 

@@ -16,7 +16,7 @@
 //!
 //! ```toml
 //! [dependencies]
-//! key-mapping = "0.6"
+//! key-mapping = "0.7"
 //! ```
 //!
 //! ```rust,editable
