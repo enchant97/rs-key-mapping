@@ -8,6 +8,7 @@
 //!
 //! - **`std`** *(enabled by default)* - Add support for Rust's libstd types.
 //! - **`serde`** Add support for `serde` de/serializing library.
+//! - **`defmt`** Add support for defmt library.
 //! - **`usbd-hid`** Add support for converting between the usbd-hid library KeyboardReport.
 //! - **`embassy-usb-host`** Add support for converting between the embassy-usb-host library KeyboardReport.
 //!
@@ -44,6 +45,7 @@ pub const MODIFIER_CODE_META: u8 = 8;
 /// Keyboard layouts, used to convert between key-code types.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Default)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum Keyboard {
     /// US keyboard layout *(default)*
     #[default]
@@ -66,6 +68,7 @@ impl Keyboard {
 /// Keyboard key type.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub enum MappedKeyType {
     Special,
     Modifier,
@@ -82,6 +85,7 @@ pub enum MappedKeyType {
 /// A single mapped keyboard key.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub struct MappedKey<'a> {
     /// HID usage-id for keyboard key
     pub usage_id: u8,
@@ -99,6 +103,7 @@ pub struct MappedKey<'a> {
 /// Defaults to no keys or modifiers.
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 #[cfg_attr(feature = "serde", derive(Serialize, Deserialize))]
+#[cfg_attr(feature = "defmt", derive(defmt::Format))]
 pub struct KeyboardReport<const N: usize = 6> {
     /// Keys included in action, represented as usage-ids
     #[cfg_attr(feature = "serde", serde(with = "serde_arrays"))]

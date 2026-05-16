@@ -15,6 +15,7 @@ categories = [ "no-std", "no-std::no-alloc", "encoding" ]
 phf = { version = "0.13", default-features = false }
 serde = { version = "1.0", default-features = false, features = [ "derive" ], optional = true }
 serde_arrays = { version = "0.2", optional = true }
+defmt = { version = "1.1", optional = true }
 usbd-hid = { version = "0.10", optional = true }
 embassy-usb-host = { version = "0.1", optional = true }
 
